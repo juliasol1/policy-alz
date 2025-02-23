@@ -63,7 +63,7 @@ module "alz" {
             maintenanceConfigurationResourceId = jsonencode({ value = local.maintenance_configuration_resource_id })
           }
         }
-        
+
         Enable-DDoS-VNET = {
           enforcement_mode = "DoNotEnforce"
         }
@@ -71,7 +71,7 @@ module "alz" {
         SQL = {
           enforcement_mode = "DoNotEnforce"
         }
-        
+
       }
     }
   }

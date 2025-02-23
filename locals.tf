@@ -24,7 +24,6 @@ locals {
   ]) : "${psdval.mg}/${psdval.key}" => psdval }
 }
 
-
 locals {
   policy_assignments = {
     for paval in flatten([
