@@ -1,3 +1,6 @@
+# variable "parent_resource_id" {
+#   type        = string
+# }
 variable "architecture_name" {
   type        = string
   description = <<DESCRIPTION
@@ -519,4 +522,5 @@ The object has attributes for each resource type, with the following optional at
 
 Each time duration is parsed using this function: <https://pkg.go.dev/time#ParseDuration>.
 DESCRIPTION
+
 }

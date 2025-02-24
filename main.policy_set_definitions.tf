@@ -1,3 +1,4 @@
+/*
 resource "azapi_resource" "policy_set_definitions" {
   for_each = local.policy_set_definitions
 
@@ -23,3 +24,4 @@ resource "azapi_resource" "policy_set_definitions" {
     update = var.timeouts.policy_set_definition.update
   }
 }
+*/

@@ -2,8 +2,14 @@
 name: custom
 management_groups:
   - archetypes:
+      - corp-custom
+    display_name: ALZ root
+    exists: false
+    id: mycorp
+    parent_id: null
+  - archetypes:
       - root-custom
     display_name: ALZ root
-    exists: true
-    id: myroot
+    exists: false
+    id: myroot2
     parent_id: null

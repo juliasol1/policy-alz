@@ -2,7 +2,6 @@ resource "terraform_data" "policy_assignments_dependencies" {
   input = sha256(jsonencode(var.dependencies.policy_assignments))
 }
 
-
 resource "azapi_resource" "policy_assignments" {
   for_each = local.policy_assignments
 

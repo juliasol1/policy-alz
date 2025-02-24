@@ -1,0 +1,7 @@
+---
+base_archetype: corp
+name: corp-custom
+policy_assignments_to_add:
+  - "Update-Ring1"
+  - "Enable-DDoS-VNET"
+  - "SQL"
