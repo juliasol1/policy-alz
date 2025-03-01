@@ -3,7 +3,8 @@ provider "alz" {
   library_references = [
     {
       path = "platform/alz",
-      ref  = "2024.10.1"
+      # should i keep this string empty, or do versioning?
+      ref  = ""
     },
     {
       custom_url = "${path.root}/lib"
