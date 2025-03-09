@@ -419,7 +419,7 @@ variable "retries" {
       ])
       interval_seconds     = optional(number, 5)
       max_interval_seconds = optional(number, 30)
-      multiplier           = optional(number, null)
+      multiplier           = optional(number, 1)
       randomization_factor = optional(number, null)
     }), {})
     policy_role_assignments = optional(object({

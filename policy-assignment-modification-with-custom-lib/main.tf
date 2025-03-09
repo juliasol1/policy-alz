@@ -49,31 +49,37 @@ locals {
   maintenance_configuration_name        = "ring1"
   maintenance_configuration_resource_id = provider::azapi::resource_group_resource_id(data.azurerm_client_config.current.subscription_id, local.update_manager_rg_name, "Microsoft.Maintenance/maintenanceConfigurations", [local.maintenance_configuration_name])
   update_manager_rg_name                = "rg-update-manager"
+  architecture_name                     = "custom"
 }
 
-module "alz" {
-  source             = "../"
-  architecture_name  = "custom"
+
+  # policy_assignments_to_modify = {
+  #   myroot = {
+  #     policy_assignments = {
+    # enforcement_mode = "DoNotEnforce"
+  #       Update-Ring1 = {
+  #         parameters = {
+  #           maintenanceConfigurationResourceId = jsonencode({ value = local.maintenance_configuration_resource_id })
+  #         }
+  #       }
+
+  #       Enable-DDoS-VNET = {
+  #         enforcement_mode = "DoNotEnforce"
+  #       }
+
+  #       SQL = {
+  #         enforcement_mode = "DoNotEnforce"
+  #       }
+
+  #     }
+  #   }
+  # }
+
+
+module "avm-ptn-alz" {
+  source  = "Azure/avm-ptn-alz/azurerm"
+  version = "0.11.1"
+  architecture_name  = local.architecture_name
   parent_resource_id = data.azurerm_client_config.current.tenant_id
   location           = local.location
-  policy_assignments_to_modify = {
-    myroot = {
-      policy_assignments = {
-        Update-Ring1 = {
-          parameters = {
-            maintenanceConfigurationResourceId = jsonencode({ value = local.maintenance_configuration_resource_id })
-          }
-        }
-
-        Enable-DDoS-VNET = {
-          enforcement_mode = "DoNotEnforce"
-        }
-
-        SQL = {
-          enforcement_mode = "DoNotEnforce"
-        }
-
-      }
-    }
-  }
 }

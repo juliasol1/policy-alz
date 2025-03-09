@@ -2,14 +2,32 @@
 name: custom
 management_groups:
   - archetypes:
-      - corp-custom
-    display_name: ALZ root
-    exists: false
-    id: mycorp
+      - root
+    display_name: ABC
+    exists: true
+    id: pseudo-root
     parent_id: null
-  - archetypes:
-      - root-custom
-    display_name: ALZ root
-    exists: false
-    id: myroot2
-    parent_id: null
+  # - archetypes:
+  #     - corp
+  #   display_name: company-one
+  #   exists: true
+  #   id: company-one
+  #   parent_id: pseudo-root
+  # - archetypes:
+  #     - corp
+  #   display_name: company-two
+  #   exists: true
+  #   id: company-two
+  #   parent_id: pseudo-root
+  # - archetypes:
+  #     - platform
+  #   display_name: Platform
+  #   exists: true
+  #   id: platform
+  #   parent_id: pseudo-root    
+  # - archetypes:
+  #     - sandbox
+  #   display_name: Sandbox
+  #   exists: true
+  #   id: sandbox
+  #   parent_id: platform     
