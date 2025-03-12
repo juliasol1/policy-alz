@@ -22,6 +22,6 @@ provider "azurerm" {
       prevent_deletion_if_contains_resources = false
     }
   }
-  tenant_id       = "60484d41-f4c4-4a62-a76f-b056885aedd0"
-  subscription_id = "a8fd746f-85be-4734-a7b6-3e532a9bfa77"
+  tenant_id       = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+  subscription_id = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
 }

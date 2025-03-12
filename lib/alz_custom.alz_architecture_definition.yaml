@@ -7,27 +7,27 @@ management_groups:
     exists: true
     id: pseudo-root
     parent_id: null
-  # - archetypes:
-  #     - corp
-  #   display_name: company-one
-  #   exists: true
-  #   id: company-one
-  #   parent_id: pseudo-root
-  # - archetypes:
-  #     - corp
-  #   display_name: company-two
-  #   exists: true
-  #   id: company-two
-  #   parent_id: pseudo-root
-  # - archetypes:
-  #     - platform
-  #   display_name: Platform
-  #   exists: true
-  #   id: platform
-  #   parent_id: pseudo-root    
-  # - archetypes:
-  #     - sandbox
-  #   display_name: Sandbox
-  #   exists: true
-  #   id: sandbox
-  #   parent_id: platform     
+  - archetypes:
+      - corp
+    display_name: company-one
+    exists: true
+    id: company-one
+    parent_id: pseudo-root
+  - archetypes:
+      - corp
+    display_name: company-two
+    exists: true
+    id: company-two
+    parent_id: pseudo-root
+  - archetypes:
+      - platform
+    display_name: Platform
+    exists: true
+    id: platform
+    parent_id: pseudo-root    
+  - archetypes:
+      - sandbox
+    display_name: Sandbox
+    exists: true
+    id: sandbox
+    parent_id: platform     
