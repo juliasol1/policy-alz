@@ -1,0 +1,6 @@
+variables:
+  - name: tenant_id
+    value: 60
+  #######################################
+  - name: subscription_id
+    value: 2.3.3
